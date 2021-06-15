@@ -33,8 +33,22 @@ for i = 1:size(mdl_.rxns,1)
                         mini = optimizeCbModel(model, 'min'); % minmodelize the model
                         maxi = optimizeCbModel(model, 'max'); % maxmodelize the model
                         if round(mini.f,rnd) == round(maxi.f,rnd) && round(mini.f,rnd) > 0
-                            fctable(i,j) = 1;
-                            fctable(j,i) = 1;
+                            %%% find flux cone
+                            model = mdl_;
+                            objective = model.rxns(i,1);
+                            objectiveCoeff = 1;
+                            ave = (model.lb(j,1) + model.ub(j,1))/2;
+                            model.lb(j,1) = ave;
+                            model.ub(j,1) = ave;
+                            model = changeObjective(model, objective, objectiveCoeff); % change objective of the model
+                            mini2 = optimizeCbModel(model, 'min'); % minmodelize the model
+                            maxi2 = optimizeCbModel(model, 'max'); % maxmodelize the model
+                            if round(mini2.f,rnd) == round(maxi2.f,rnd) && round(mini2.f,rnd) > 0
+                                if round(mini2.f,rnd) > round(mini.f,rnd)
+                                    fctable(i,j) = 1;
+                                    fctable(j,i) = 1;
+                                end
+                            end
                         end
                     end
                 end
