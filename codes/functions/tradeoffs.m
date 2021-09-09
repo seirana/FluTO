@@ -1,6 +1,8 @@
 function tradeoffs(mdl_, fctable, cb, adrs_mdl_folder, file_name)
+%%% 'reversible' reaction is called 'sign variable' reaction in the paper
+%%% 'variable is called 'fixed-sign variable' reaction in the paper
 for i = size(mdl_.rxnType,1):-1:1
-    if strcmp(string(mdl_.rxnType(i)), 'fixed') == 1 || strcmp(string(mdl_.rxnType(i)), 'reversible') == 1
+    if strcmp(string(mdl_.rxnType(i)), 'fixed') == 1 || strcmp(string(mdl_.rxnType(i)), 'reversible') == 1  
         fctable(i,:) = [];
         fctable(:,i) = [];
     end
@@ -85,7 +87,7 @@ Aeq1 = [N', alpha, zeros(r,v2), zeros(r,v2)]; % k*N = alpha
 beq1 = zeros(r,1);
 
 tr_size = 2;
-Aeq2 = [zeros(1,m), zeros(1,f2+v2), zeros(1,v2), ones(1,v2)]; % tr_size <= sum s
+Aeq2 = [zeros(1,m), zeros(1,f2+v2), zeros(1,v2), ones(1,v2)]; % tr_size <= sum s %% = trade-off length
 beq2 = tr_size;
 
 Aeq = [Aeq1;Aeq2];
@@ -94,16 +96,16 @@ beq = [beq1;beq2];
 Ain1 = [zeros(1,m), -1*ones(1,f2), zeros(1,v2), zeros(1,v2), zeros(1,v2)]; % 1 <= sum alpha_fixed
 bin1 = -1;
 
-Ain2 = [zeros(v2,m), zeros(v2,f2), eye(v2), -1*eye(v2), zeros(v2)]; % alpha_variable <= u
+Ain2 = [zeros(v2,m), zeros(v2,f2), eye(v2), -1*eye(v2), zeros(v2)]; % alpha_fixed-sign variable <= u
 bin2 = zeros(v2,1);
 
-Ain3 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), -1*eye(v2), zeros(v2)]; % -u <= alpha_variable
+Ain3 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), -1*eye(v2), zeros(v2)]; % -u <= alpha_fixed-sign variable
 bin3 = zeros(v2,1);
 
-Ain4 = [zeros(v2,m), zeros(v2,f2), eye(v2), zeros(v2), M*eye(v2)]; % alpha_variable + M*s <= M-1
+Ain4 = [zeros(v2,m), zeros(v2,f2), eye(v2), zeros(v2), M*eye(v2)]; % alpha_fixed-sign variable + M*s <= M-1
 bin4 = (M-1)*ones(v2,1);
 
-Ain5 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), zeros(v2), -1*M*eye(v2)]; % 0 <= alpha_variable_i + M*s
+Ain5 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), zeros(v2), -1*M*eye(v2)]; % 0 <= alpha_fixed-sign variable_i + M*s
 bin5= zeros(v2,1);
 
 Ain = [Ain1;Ain2;Ain3;Ain4;Ain5];
