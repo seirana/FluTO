@@ -87,7 +87,7 @@ Aeq1 = [N', alpha, zeros(r,v2), zeros(r,v2)]; % k*N = alpha
 beq1 = zeros(r,1);
 
 tr_size = 2;
-Aeq2 = [zeros(1,m), zeros(1,f2+v2), zeros(1,v2), ones(1,v2)]; % tr_size <= sum s %% = trade-off length
+Aeq2 = [zeros(1,m), zeros(1,f2+v2), zeros(1,v2), ones(1,v2)]; % tr_size <= sum s %%% = trade-off length
 beq2 = tr_size;
 
 Aeq = [Aeq1;Aeq2];
