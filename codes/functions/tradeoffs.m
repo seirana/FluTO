@@ -96,16 +96,16 @@ beq = [beq1;beq2];
 Ain1 = [zeros(1,m), -1*ones(1,f2), zeros(1,v2), zeros(1,v2), zeros(1,v2)]; % 1 <= sum alpha_fixed
 bin1 = -1;
 
-Ain2 = [zeros(v2,m), zeros(v2,f2), eye(v2), -1*eye(v2), zeros(v2)]; % alpha_fixed-sign variable <= u
+Ain2 = [zeros(v2,m), zeros(v2,f2), eye(v2), -1*eye(v2), zeros(v2)]; % alpha_variable <= u
 bin2 = zeros(v2,1);
 
-Ain3 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), -1*eye(v2), zeros(v2)]; % -u <= alpha_fixed-sign variable
+Ain3 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), -1*eye(v2), zeros(v2)]; % -u <= alpha_variable
 bin3 = zeros(v2,1);
 
-Ain4 = [zeros(v2,m), zeros(v2,f2), eye(v2), zeros(v2), M*eye(v2)]; % alpha_fixed-sign variable + M*s <= M-1
+Ain4 = [zeros(v2,m), zeros(v2,f2), eye(v2), zeros(v2), M*eye(v2)]; % alpha_variable + M*s <= M-1
 bin4 = (M-1)*ones(v2,1);
 
-Ain5 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), zeros(v2), -1*M*eye(v2)]; % 0 <= alpha_fixed-sign variable_i + M*s
+Ain5 = [zeros(v2,m), zeros(v2,f2), -1*eye(v2), zeros(v2), -1*M*eye(v2)]; % 0 <= alpha_variable_i + M*s
 bin5= zeros(v2,1);
 
 Ain = [Ain1;Ain2;Ain3;Ain4;Ain5];
