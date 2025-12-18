@@ -1,4 +1,4 @@
-FluTO — Flux Trade-Off Identification in Metabolic Networks
+# FluTO — Flux Trade-Off Identification in Metabolic Networks
 
 Repository for the implementation of FluTO, a constraint-based approach to identify and enumerate absolute flux trade-offs in genome-scale metabolic networks.
 
@@ -34,6 +34,8 @@ Nature
 Nature
 
 ## Key Concepts
+
+
 What is a Flux Trade-Off?
 
 A flux trade-off exists when a change in one reaction’s flux necessitates a compensatory change in another reaction’s flux due to network structure and constraints.
@@ -44,7 +46,9 @@ Typically reveal tightly coupled pathway components or shared resource dependenc
 
 These trade-offs help identify critical metabolic relationships and network bottlenecks.
 
+
 ## Method Summary
+
 
 The FluTO pipeline consists of:
 
@@ -77,3 +81,15 @@ Analysis
 Analyze trade-offs across conditions to reveal network features (e.g., carbon source specificity).
 
 Visualize networks and trade-off relations.
+
+
+## Output
+
+
+FluTO generates:
+
+A list of identified trade-offs (reaction sets with coefficients)
+
+Trade-off statistics
+
+Optional visualization of trade-off networks
