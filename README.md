@@ -7,7 +7,7 @@ Hashemi, S., Razaghi-Moghadam, Z., & Nikoloski, Z. (2021). Identification of flu
  
 Nature
 
-📌 Overview
+## Overview
 
 FluTO (Flux Trade-Off) is a computational method to systematically identify and enumerate absolute trade-offs between fluxes in a metabolic network subject to constraints. Absolute flux trade-offs refer to pairs or sets of reaction fluxes that cannot vary independently due to network stoichiometry and applied constraints — an inherent property of biochemical networks.
 
@@ -22,7 +22,7 @@ how growth and nutrient uptake constraints shape metabolic phenotypes.
 FluTO provides a means to explore the space of alternative metabolic states that are consistent with a chosen set of constraints and inherent reaction dependencies. 
 Nature
 
-🚀 Features
+## Features
 
 ✔ Identifies absolute flux trade-offs across large-scale metabolic networks
 ✔ Works with genome-scale metabolic models (e.g., E. coli, S. cerevisiae, A. thaliana)
@@ -33,8 +33,8 @@ Nature
 ✔ Implemented in MATLAB with accompanying example datasets 
 Nature
 
-🧠 Key Concepts
-🧬 What is a Flux Trade-Off?
+## Key Concepts
+What is a Flux Trade-Off?
 
 A flux trade-off exists when a change in one reaction’s flux necessitates a compensatory change in another reaction’s flux due to network structure and constraints.
 
@@ -44,7 +44,7 @@ Typically reveal tightly coupled pathway components or shared resource dependenc
 
 These trade-offs help identify critical metabolic relationships and network bottlenecks.
 
-🛠 Method Summary
+## Method Summary
 
 The FluTO pipeline consists of:
 
