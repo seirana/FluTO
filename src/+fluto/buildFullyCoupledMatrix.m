@@ -91,7 +91,7 @@ function options = localOptions(options)
     if ~isfield(options, "tolerance")
         options.tolerance = 1e-7;
     end
-    validateattributes(options.tolerance, {"numeric"}, {"scalar", "real", "positive", "finite"});
+    validateattributes(options.tolerance, {'numeric'}, {'scalar', 'real', 'positive', 'finite'});
 end
 
 function tf = localCompatibleSignClass(model, i, j, tolerance)
