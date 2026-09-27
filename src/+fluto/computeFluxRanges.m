@@ -105,10 +105,10 @@ function options = localOptions(options)
         end
     end
 
-    validateattributes(options.tolerance, {"numeric"}, {"scalar", "real", "nonnegative", "finite"});
-    validateattributes(options.removeBlocked, {"logical", "numeric"}, {"scalar"});
-    validateattributes(options.canonicalize, {"logical", "numeric"}, {"scalar"});
-    validateattributes(options.progressInterval, {"numeric"}, {"scalar", "integer", "nonnegative"});
+    validateattributes(options.tolerance, {'numeric'}, {'scalar', 'real', 'nonnegative', 'finite'});
+    validateattributes(options.removeBlocked, {'logical', 'numeric'}, {'scalar'});
+    validateattributes(options.canonicalize, {'logical', 'numeric'}, {'scalar'});
+    validateattributes(options.progressInterval, {'numeric'}, {'scalar', 'integer', 'nonnegative'});
     options.removeBlocked = logical(options.removeBlocked);
     options.canonicalize = logical(options.canonicalize);
 end
