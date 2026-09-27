@@ -40,5 +40,5 @@ function combinations = expandCoupledAlternatives(selectedIndices, couplingMatri
         valid(row) = numel(unique(combinations(row, :))) == numel(selected);
     end
 
-    combinations = unique(combinations(valid, :), "rows", "stable");
+    combinations = sortrows(unique(combinations(valid, :), "rows"));
 end
