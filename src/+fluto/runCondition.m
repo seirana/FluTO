@@ -29,7 +29,7 @@ function output = runCondition(model, condition, options)
         options.tradeoffOptions = struct();
     end
 
-    validateattributes(options.tolerance, {"numeric"}, {"scalar", "real", "positive", "finite"});
+    validateattributes(options.tolerance, {'numeric'}, {'scalar', 'real', 'positive', 'finite'});
 
     model = fluto.validateModel(model);
     model = fluto.applyCondition(model, condition);
