@@ -12,7 +12,7 @@ function [model, fluxTable] = classifyFluxes(model, tolerance)
     if nargin < 2 || isempty(tolerance)
         tolerance = 1e-9;
     end
-    validateattributes(tolerance, {"numeric"}, {"scalar", "real", "nonnegative", "finite"});
+    validateattributes(tolerance, {'numeric'}, {'scalar', 'real', 'nonnegative', 'finite'});
 
     model = fluto.validateModel(model);
 
