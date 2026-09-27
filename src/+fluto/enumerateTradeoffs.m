@@ -286,11 +286,11 @@ function options = localOptions(options)
         end
     end
 
-    validateattributes(options.minDegree, {"numeric"}, {"scalar", "integer", "positive"});
-    validateattributes(options.maxDegree, {"numeric"}, {"scalar", "integer", ">=", options.minDegree});
-    validateattributes(options.bigM, {"numeric"}, {"scalar", "real", "positive", "finite"});
-    validateattributes(options.variableBound, {"numeric"}, {"scalar", "real", "positive", "finite"});
-    validateattributes(options.maxSolutions, {"numeric"}, {"scalar", "real", "positive"});
+    validateattributes(options.minDegree, {'numeric'}, {'scalar', 'integer', 'positive'});
+    validateattributes(options.maxDegree, {'numeric'}, {'scalar', 'integer', '>=', options.minDegree});
+    validateattributes(options.bigM, {'numeric'}, {'scalar', 'real', 'positive', 'finite'});
+    validateattributes(options.variableBound, {'numeric'}, {'scalar', 'real', 'positive', 'finite'});
+    validateattributes(options.maxSolutions, {'numeric'}, {'scalar', 'real', 'positive'});
     options.display = char(string(options.display));
 end
 
