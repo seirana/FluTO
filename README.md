@@ -275,7 +275,7 @@ The solver-independent tests cover:
 
 GitHub Actions runs these tests on a clean MATLAB runner and verifies that the maintained package entry points parse and resolve.
 
-Current MATLAB GitHub Actions use the official `matlab-actions/setup-matlab@v3` and `matlab-actions/run-command@v3` workflow. citeturn340637search0turn340637search1
+GitHub Actions uses the official `matlab-actions/setup-matlab@v3` and `matlab-actions/run-command@v3` workflow.
 
 ## Repository layout
 
