@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use FluTO, please cite the associated Scientific Reports article."
+title: "FluTO"
+type: software
+authors:
+  - family-names: "Hashemi"
+    given-names: "S."
+  - family-names: "Razaghi-Moghadam"
+    given-names: "Z."
+  - family-names: "Nikoloski"
+    given-names: "Z."
+repository-code: "https://github.com/seirana/FluTO"
+preferred-citation:
+  type: article
+  title: "Identification of flux trade-offs in metabolic networks"
+  authors:
+    - family-names: "Hashemi"
+      given-names: "S."
+    - family-names: "Razaghi-Moghadam"
+      given-names: "Z."
+    - family-names: "Nikoloski"
+      given-names: "Z."
+  journal: "Scientific Reports"
+  volume: 11
+  year: 2021
+  doi: "10.1038/s41598-021-03224-9"
