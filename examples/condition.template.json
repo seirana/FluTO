@@ -1,0 +1,8 @@
+{
+  "name": "replace-with-condition-name",
+  "blockReactionNumbers": [101, 102],
+  "activeReactionNumber": 101,
+  "activeBounds": [-10, -10],
+  "fixedReactionNumbers": [200, 716, 721, 723],
+  "fixedFluxValues": [-0.9476, 3.15, 0.0931, 12.612]
+}

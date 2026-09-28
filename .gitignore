@@ -1,0 +1,23 @@
+# MATLAB
+*.asv
+*.m~
+*.autosave
+slprj/
+codegen/
+*.mex*
+*.mltbx
+
+# Test and coverage artifacts
+test-results/
+code-coverage/
+
+# Generated analysis outputs
+artifacts/
+outputs/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+
+# Local configuration
+.env
